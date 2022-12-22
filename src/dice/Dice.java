@@ -7,18 +7,23 @@ public abstract class Dice {
 	private final Integer minValue;
 	private Integer value;
 
-	protected Dice(Integer maxValue, Integer minValue) {
-		this.maxValue = maxValue;
+	protected Dice(Integer minValue, Integer maxValue) {
 		this.minValue = minValue;
+		this.maxValue = maxValue;
 		roll();
 	}
 
-	void roll(){
+	public void roll(){
 		value = ThreadLocalRandom.current().nextInt(minValue, maxValue+1);
 	}
 
 	public Integer getValue(){
 		return value;
+	}
+
+	@Override
+	public String toString() {
+		return "Dice{" + "value=" + value + '}';
 	}
 
 	@Override

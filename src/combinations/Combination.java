@@ -4,7 +4,7 @@ import dice.Dice;
 
 import java.util.List;
 
-class Combination {
+public class Combination {
 
 	private final String name;
 	private final Integer points;
@@ -26,6 +26,11 @@ class Combination {
 
 	public List<Dice> getDice() {
 		return dice;
+	}
+
+	@Override
+	public String toString() {
+		return "Combination{" + "name='" + name + '\'' + ", points=" + points + ", dice=" + dice + '}';
 	}
 
 }
