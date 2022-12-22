@@ -49,7 +49,7 @@ public abstract class CombinationHandler implements Appendable<CombinationHandle
 
 	}
 
-	protected Boolean containsValues(List<Dice> diceList, List<Integer> values) {
+	private Boolean containsValues(List<Dice> diceList, List<Integer> values) {
 		return values.stream()
 				.map(value -> diceList.stream()
 						.map(Dice::getValue)
